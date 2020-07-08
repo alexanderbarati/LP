@@ -9,7 +9,7 @@ print(courses[0:2]) # first index is inclusive but the second one is not
 print(courses[:2])
 print(courses[2:])
 '''[Slicing Lists and Strings]
-(ttps://www.youtube.com/watch?v=ajrtAuDg3yw)'''
+    (ttps://www.youtube.com/watch?v=ajrtAuDg3yw)'''
 
 '''2: adding'''
 courses.append('Art')
@@ -93,8 +93,37 @@ new_list = course_str.split(' - ') # Making a list of a string
 print(new_list)
 
 
-'''8: TUples'''
+'''8: Tuples'''
 
 '''[Mutable vs Immutable](https://www.youtube.com/watch?v=5qQQ3yzbKp8)'''
 
-min : 20
+''' Tuples are immutable, so when we need Immutable list,
+    we Use Tuples'''
+
+tuple_1 = ('History', 'Math', 'Physic', 'Computer')
+tuple_2 = tuple_1
+
+print(tuple_1)
+print(tuple_2)
+# tuple_1[0] = 'Art' this command doesnt work because tuples are immutable
+
+''' 9 : sets
+    sets dont really care about order
+    set throw away duplicates'''
+
+cs_courses = {'History', 'Math', 'Physic', 'History', 'Computer'}
+print(cs_courses)
+print('Math' in cs_courses) # we can do this with lists and tuples to but sets are optimizied for this
+
+art_courses = {'art', 'Math', 'design', 'History', 'Computer'}
+
+print(cs_courses.intersection(art_courses)) # this print out the same thing in both sets
+print(art_courses.difference(cs_courses)) # this print out the diffrence between to sets
+
+print(art_courses.union(cs_courses)) # this print out all the values on two sets
+
+'''10 creating empty  list, set and tuple'''
+empty_list = []
+empty_tuple = ()
+empty_set = set{}
+empty_dictionary = {}
